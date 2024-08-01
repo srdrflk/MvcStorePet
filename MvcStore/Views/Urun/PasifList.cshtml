@@ -1,0 +1,27 @@
+﻿@model MvcStore.Models.Entity.tblUrunler
+@{
+    ViewBag.Title = "PasifList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("PasifGuncelle", "Urun", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+    <br />
+    @Html.DropDownListFor(x => x.Durum, (List<SelectListItem>)ViewBag.durum, new { @class = "form-control" })
+    @*@Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })*@
+    <br />
+    <button class="btn btn-primary">Kaydet</button>
+}
+

@@ -1,0 +1,23 @@
+﻿@model MvcStore.Models.Entity.tblSatislar
+@{
+    ViewBag.Title = "YeniSatis";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Ürün adını</label>
+    @Html.DropDownListFor(x => x.tblUrunler.Id, (List<SelectListItem>)ViewBag.urun, new { @class = "form-control" })
+    <br />
+    <label>Satış danışmanı</label>
+    @Html.DropDownListFor(x => x.tblPersonel.Id, (List<SelectListItem>)ViewBag.personel, new { @class = "form-control" })
+    <br />
+    <label>Müştei adı</label>
+    @Html.DropDownListFor(x => x.tblMusteri.Id, (List<SelectListItem>)ViewBag.musteri, new { @class = "form-control" })
+    <br />
+    <label>Ürün satış fiyatını giriniz</label>
+    @*@Html.DropDownListFor(x => x.tblUrunler.Id, (List<SelectListItem>)ViewBag.fiyat, new { @class = "form-control" })*@
+    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary" onclick="return confirm('Satışı onaylamak isteiğinizden eminmisiniz?')">Satış Onayla</button>
+</form>
+

@@ -1,0 +1,19 @@
+﻿@model MvcStore.Models.Entity.tblPersonel
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Personel", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Departman, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+}
+

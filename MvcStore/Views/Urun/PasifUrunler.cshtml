@@ -1,0 +1,39 @@
+﻿@using MvcStore.Models.Entity
+@model List<tblUrunler>
+@{
+    ViewBag.Title = "PasifUrunler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Adı</th>
+        <th>Marka</th>
+        <th>Stok</th>
+        <th>Alıs Fiyat</th>
+        <th>Satıs Fiyat</th>
+        <th>Kategorisi</th>
+        <th>Durum</th>
+        <th>Güncelle</th>
+
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Ad</td>
+            <td>@x.Marka</td>
+            <td>@x.Stok</td>
+            <td>@x.AlisFiyat</td>
+            <td>@x.SatisFiyat</td>
+            <td>@x.tblKategori.Ad</td>
+            <td>@x.Durum</td>
+
+            <td><a href="/Urun/PasifList/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Urun/Index" class="btn btn-default">Aktif ürünler sayfasına dön.</a>
+

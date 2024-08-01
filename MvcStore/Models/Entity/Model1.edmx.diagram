@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1d9409ba37ef4b01aba0ac5fb5164c54" Name="Diagram1">
+        <EntityTypeShape EntityType="DbMvcMagazaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblKategori" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblMusteri" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblPersonel" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblSatislar" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblUrunler" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="DbMvcMagazaModel.FK_tblUrunler_tblKategori" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcMagazaModel.FK_tblSatislar_tblMusteri" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcMagazaModel.FK_tblSatislar_tblPersonel" ManuallyRouted="false" />
+        <AssociationConnector Association="DbMvcMagazaModel.FK_tblSatislar_tblUrunler" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DbMvcMagazaModel.tblAdmin" Width="1.5" PointX="7.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

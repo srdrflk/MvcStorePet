@@ -1,0 +1,25 @@
+﻿@model MvcStore.Models.Entity.tblUrunler
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
+    <br />
+    @Html.DropDownListFor(x=>x.tblKategori.Id,(List<SelectListItem>)ViewBag.kat,new { @class="form-control"})
+    <br />
+    <button class="btn btn-primary">Güncelle</button>
+}
+
+

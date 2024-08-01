@@ -1,0 +1,45 @@
+﻿@using MvcStore.Models.Entity
+@model List<tblUrunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Index", "Urun", FormMethod.Get))
+{
+    <p>
+        Ürün Adı @Html.TextBox("p")
+        <input type="submit" value="Ara"/>
+    </p>
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Adı</th>
+        <th>Marka</th>
+        <th>Stok</th>
+        <th>Alıs Fiyat</th>
+        <th>Satıs Fiyat</th>
+        <th>Kategorisi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Ad</td>
+            <td>@x.Marka</td>
+            <td>@x.Stok</td>
+            <td>@x.AlisFiyat</td>
+            <td>@x.SatisFiyat</td>
+            <td>@x.tblKategori.Ad</td>
+            <td><a href="/Urun/Sil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a></td>
+            <td><a href="/Urun/List/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Urun/YeniUrun" class="btn btn-primary" style="margin-top:25px">Ürün Ekle</a>
+<a href="/Urun/PasifUrunler" class="btn btn-info" style="margin-top:25px">Pasif Urunleri gor</a>
+

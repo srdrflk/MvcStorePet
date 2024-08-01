@@ -1,0 +1,34 @@
+﻿@using MvcStore.Models.Entity
+@model List<tblMusteri>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Şehir</th>
+        <th>Bakiye</th>
+        <th>Durum</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.Ad</td>
+            <td>@x.Soyad</td>
+            <td>@x.Sehir</td>
+            <td>@x.Bakiye</td>
+            <td>@x.Durum</td>
+            <td><a href="/Musteri/Sil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a></td>
+            <td><a href="/Musteri/List/@x.Id" class="btn btn-warning">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Musteri/YeniMusteri" class="btn btn-primary" style="margin-top:25px">Müşteri Ekle</a>
+

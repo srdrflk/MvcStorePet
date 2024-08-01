@@ -1,0 +1,21 @@
+﻿@model MvcStore.Models.Entity.tblMusteri
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Musteri", FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Sehir, new { @class = "form-control" })
+    <br />
+    @Html.TextBoxFor(x => x.Bakiye, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-primary">Güncelle</button>
+}
+

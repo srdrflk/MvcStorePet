@@ -1,0 +1,22 @@
+﻿@model MvcStore.Models.Entity.tblMusteri
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    @Html.ValidationMessageFor(m => m.Ad, "", new { @style = "color:red" })
+    <label>Müşteri adı girin</label>
+    <input class="form-control" type="text" name="Ad" />
+    @Html.ValidationMessageFor(m => m.Soyad, "", new { @style = "color:red" })
+    <label>Müşteri soyadı girin</label>
+    <input class="form-control" type="text" name="Soyad" />
+    <label>Şehrini girin</label>
+    <input class="form-control" type="text" name="Sehir" />
+    <label>Bakiyesi</label>
+    <input class="form-control" type="text" name="Bakiye" />
+
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>
+

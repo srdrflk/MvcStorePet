@@ -1,0 +1,30 @@
+﻿@using MvcStore.Models.Entity
+@model List<tblSatislar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Ürün</th>
+        <th>Personel</th>
+        <th>Müşteri</th>
+        <th>Fiyat</th>
+        <th>Tarih</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.Id</td>
+            <td>@x.tblUrunler.Ad</td>
+            <td>@x.tblPersonel.Ad @x.tblPersonel.Soyad</td>
+            <td>@x.tblMusteri.Ad @x.tblMusteri.Soyad</td>
+            <td>@x.Fiyat</td>
+            <td>@x.Tarih</td>
+        </tr>
+    }
+</table>
+<a href="/Satis/YeniSatis" class="btn btn-primary" style="margin-top:25px">Yeni Satış yap</a>
+

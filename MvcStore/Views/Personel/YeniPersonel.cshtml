@@ -1,0 +1,17 @@
+﻿@model MvcStore.Models.Entity.tblPersonel
+@{
+    ViewBag.Title = "YeniPersonel";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Adı</label>
+    <input class="form-control" type="text" name="Ad" />
+    <label>Soyadı</label>
+    <input class="form-control" type="text" name="Soyad" />
+    <label>Departmanı</label>
+    <input class="form-control" type="text" name="Departman" />
+    <br />
+    <button class="btn btn-primary">Ekle</button>
+</form>
+
