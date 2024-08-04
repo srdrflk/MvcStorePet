@@ -7,21 +7,24 @@
 @using (Html.BeginForm("PasifGuncelle", "Urun", FormMethod.Post))
 {
     @Html.HiddenFor(x => x.Id)
+    <label>Ürün adını giriniz...</label>
     @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
     <br />
+    <label>Ürün markasını giriniz...</label>
     @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
     <br />
+    <label>Ürün stok giriniz...</label>
     @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
     <br />
+    <label>Ürün alış fiyatı giriniz...</label>
     @Html.TextBoxFor(x => x.AlisFiyat, new { @class = "form-control" })
     <br />
+    <label>Ürün satış fiyatı giriniz...</label>
     @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
     <br />
-    @Html.TextBoxFor(x => x.Kategori, new { @class = "form-control" })
+    <label>Ürün durum giriniz...</label>
+    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
     <br />
-    @Html.DropDownListFor(x => x.Durum, (List<SelectListItem>)ViewBag.durum, new { @class = "form-control" })
-    @*@Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })*@
-    <br />
+
     <button class="btn btn-primary">Kaydet</button>
 }
-

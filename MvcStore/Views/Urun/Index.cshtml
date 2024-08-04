@@ -22,6 +22,7 @@
         <th>Alıs Fiyat</th>
         <th>Satıs Fiyat</th>
         <th>Kategorisi</th>
+        <th>Durumu</th>
         <th>Sil</th>
         <th>Güncelle</th>
     </tr>
@@ -35,6 +36,7 @@
             <td>@x.AlisFiyat</td>
             <td>@x.SatisFiyat</td>
             <td>@x.tblKategori.Ad</td>
+            <td>@x.Durum</td>
             <td><a href="/Urun/Sil/@x.Id" class="btn btn-danger" onclick="return confirm('Silmek istediğinize emin misiniz?')">Sil</a></td>
             <td><a href="/Urun/List/@x.Id" class="btn btn-warning">Güncelle</a></td>
         </tr>

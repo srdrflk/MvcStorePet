@@ -20,9 +20,6 @@
     <label>Ürün satış fiyatı giriniz...</label>
     @Html.TextBoxFor(x => x.SatisFiyat, new { @class = "form-control" })
     <br />
-    <label>Ürün durumunu giriniz...</label>
-    @Html.TextBoxFor(x => x.Durum, new { @class = "form-control" })
-    <br />
     <label>Ürün kategori giriniz...</label>
     @Html.DropDownListFor(x => x.tblKategori.Id, (List<SelectListItem>)ViewBag.drop, new { @class = "form-control" })
     <br />
